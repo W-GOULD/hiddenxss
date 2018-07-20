@@ -1,2 +1,2 @@
 # hiddenxss
-Searches a web page for hidden fields which might be vulnerable to xss
+returns the names of hidden fields in a html file. Could be useful for testing xss on hidden fields
