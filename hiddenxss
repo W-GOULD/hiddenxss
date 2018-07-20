@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+while read line
+do
+	grep -io "<input[^>]*>" | grep -io 'hidden[^>]*>' | sed -r 's/[[:alnum:]]+=/\n&/g' | grep  "name" |awk -F "=" '{print $2}' | tr -d '"' | sort -u 
+done < "${1:-/dev/stdin}"
+
